@@ -3,12 +3,14 @@ package com.waston.dao;
 import com.waston.domain.Account;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 账号DAO接口
  */
+@Repository
 public interface AccountDao {
     //查询所有账户
     @Select("select * from account")
