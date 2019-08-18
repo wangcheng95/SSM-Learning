@@ -16,7 +16,4 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <!--开启SpringMVC框架注解的支持-->
-    <mvc:annotation-driven />
-
 </beans>
