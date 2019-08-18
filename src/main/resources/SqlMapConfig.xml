@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/ssm?characterEncoding=utf8&amp;useSSL=true&amp;useUnicode=true&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入映射配置文件-->
+    <mappers>
+        <!--配置mybatis对应的DAO的XML的地址-->
+<!--        <mapper resource="com/waston/dao/xxx.xml"></mapper>-->
+        <!--本例使用的是注解方式-->
+        <mapper class="com.waston.dao.AccountDao"></mapper>
+
+        <!--也可以使用包的方式引入DAO的XML文件-->
+<!--        <package name="com.waston.dao"/>-->
+    </mappers>
+</configuration>
